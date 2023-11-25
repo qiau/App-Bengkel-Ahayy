@@ -16,19 +16,19 @@ public class LoginView extends MainView {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        lblBackground = new javax.swing.JLabel();
+
+        setMaximumSize(new java.awt.Dimension(1000, 660));
+        setMinimumSize(new java.awt.Dimension(1000, 660));
+        setLayout(null);
+
+        lblBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bgLogin.png"))); // NOI18N
+        add(lblBackground);
+        lblBackground.setBounds(0, 0, 1000, 660);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lblBackground;
     // End of variables declaration//GEN-END:variables
 }
