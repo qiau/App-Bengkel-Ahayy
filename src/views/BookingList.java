@@ -1,19 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package views;
 
-/**
- *
- * @author raiha
- */
-public class BookingList extends javax.swing.JPanel {
+public class BookingList extends MainView {
 
-    /**
-     * Creates new form BookingList
-     */
-    public BookingList() {
+    public BookingList(MainFrame mainFrame) {
+        super(mainFrame);
         initComponents();
     }
 

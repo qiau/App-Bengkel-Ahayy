@@ -1,19 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package views;
 
-/**
- *
- * @author raiha
- */
-public class BookingHistory extends javax.swing.JPanel {
+public class BookingHistory extends MainView {
 
-    /**
-     * Creates new form BookingHistory
-     */
-    public BookingHistory() {
+    public BookingHistory(MainFrame mainFrame) {
+        super(mainFrame);
         initComponents();
     }
 

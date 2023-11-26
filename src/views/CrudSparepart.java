@@ -1,19 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package views;
 
-/**
- *
- * @author LENOVO
- */
-public class CrudSparepart extends javax.swing.JPanel {
-
-    /**
-     * Creates new form CrudSparepart1
-     */
-    public CrudSparepart() {
+public class CrudSparepart extends MainView {
+    
+    public CrudSparepart(MainFrame mainFrame) {
+        super(mainFrame);
         initComponents();
     }
 
