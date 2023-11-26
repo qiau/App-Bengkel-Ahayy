@@ -6,17 +6,16 @@ import javax.swing.JPanel;
 public class MainFrame extends javax.swing.JFrame {
     private MainView entryView;
     private MainView loginView;
-    private MainView RegisterView;
+    private MainView registerView;
     
     public MainFrame() {
+        initComponents();
         this.entryView = new LoginView(this);
         showView(entryView);
-        initComponents();
     }
     
     public final void showView(JPanel view) {
-        getContentPane().removeAll();
-        add(view, BorderLayout.CENTER);
+        jPanel1.add(view,BorderLayout.CENTER);
         pack();
         revalidate();
         repaint();
@@ -27,7 +26,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     public MainView getRegisterView() {
-        return RegisterView;
+        return registerView;
     }
     
     
@@ -40,17 +39,23 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(1000, 660));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1000, 660));
+        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.LINE_AXIS));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -92,5 +97,6 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
