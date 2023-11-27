@@ -9,6 +9,7 @@ public class User implements Authenticable {
     private String phoneNumber;
     private String username;
     private String password;
+    private String profileImage;
 
     public User(String name, String address, String phoneNumber,
             String username, String password) {
@@ -50,6 +51,10 @@ public class User implements Authenticable {
         return password;
     }
 
+    public String getProfileImage() {
+        return profileImage;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -68,5 +73,9 @@ public class User implements Authenticable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setProfileImage(String profileImage) {
+        this.profileImage = profileImage;
     }
 }
