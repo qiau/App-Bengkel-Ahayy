@@ -19,6 +19,7 @@ public class RegisterView extends MainView {
         btnRegister = new javax.swing.JButton();
         lblAsk = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
+        btnShowPw = new javax.swing.JCheckBox();
         lblBackground = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(750, 500));
@@ -70,7 +71,8 @@ public class RegisterView extends MainView {
         add(txtPhone);
         txtPhone.setBounds(530, 220, 200, 30);
 
-        txtPassword.setText("jPasswordField1");
+        txtPassword.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtPassword.setText("  Password");
         txtPassword.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 69, 0), 2, true));
         txtPassword.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -86,13 +88,13 @@ public class RegisterView extends MainView {
         btnRegister.setText("Sign Up");
         btnRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 69, 0), 4, true));
         add(btnRegister);
-        btnRegister.setBounds(480, 344, 250, 26);
+        btnRegister.setBounds(480, 370, 250, 26);
 
         lblAsk.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         lblAsk.setForeground(new java.awt.Color(255, 69, 0));
         lblAsk.setText("Sudah punya akun?");
         add(lblAsk);
-        lblAsk.setBounds(480, 380, 180, 40);
+        lblAsk.setBounds(480, 400, 180, 40);
 
         btnLogin.setBackground(new java.awt.Color(255, 69, 0));
         btnLogin.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -100,7 +102,18 @@ public class RegisterView extends MainView {
         btnLogin.setText("Sign In");
         btnLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 69, 0), 4, true));
         add(btnLogin);
-        btnLogin.setBounds(660, 390, 70, 24);
+        btnLogin.setBounds(660, 410, 70, 24);
+
+        btnShowPw.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnShowPw.setText("Show Password");
+        btnShowPw.setBorder(null);
+        btnShowPw.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowPwActionPerformed(evt);
+            }
+        });
+        add(btnShowPw);
+        btnShowPw.setBounds(530, 330, 140, 30);
 
         lblBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bgRegister.png"))); // NOI18N
         add(lblBackground);
@@ -127,10 +140,19 @@ public class RegisterView extends MainView {
         txtPassword.setText("");
     }//GEN-LAST:event_txtPasswordMouseClicked
 
+    private void btnShowPwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowPwActionPerformed
+        
+        if(btnShowPw.isSelected())
+            txtPassword.setEchoChar((char)0);
+        else
+            txtPassword.setEchoChar('*');
+    }//GEN-LAST:event_btnShowPwActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnRegister;
+    private javax.swing.JCheckBox btnShowPw;
     private javax.swing.JLabel lblAsk;
     private javax.swing.JLabel lblBackground;
     private javax.swing.JTextField txtAddress;

@@ -21,6 +21,7 @@ public class LoginView extends MainView {
         lblAsk = new javax.swing.JLabel();
         btnRegister = new javax.swing.JButton();
         btnLogin = new javax.swing.JButton();
+        btnShowPw = new javax.swing.JCheckBox();
         lblBackground = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(750, 500));
@@ -38,7 +39,8 @@ public class LoginView extends MainView {
         add(txtUsername);
         txtUsername.setBounds(530, 200, 200, 30);
 
-        txtPassword.setText("jPasswordField1");
+        txtPassword.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtPassword.setText("  Password");
         txtPassword.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 69, 0), 2, true));
         txtPassword.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -68,7 +70,18 @@ public class LoginView extends MainView {
         btnLogin.setText("Sign In");
         btnLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 69, 0), 4, true));
         add(btnLogin);
-        btnLogin.setBounds(490, 310, 240, 26);
+        btnLogin.setBounds(490, 320, 240, 26);
+
+        btnShowPw.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnShowPw.setText("Show Password");
+        btnShowPw.setBorder(null);
+        btnShowPw.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowPwActionPerformed(evt);
+            }
+        });
+        add(btnShowPw);
+        btnShowPw.setBounds(530, 280, 140, 30);
 
         lblBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bgLogin.png"))); // NOI18N
         add(lblBackground);
@@ -83,10 +96,19 @@ public class LoginView extends MainView {
         txtPassword.setText("");
     }//GEN-LAST:event_txtPasswordMouseClicked
 
+    private void btnShowPwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowPwActionPerformed
+        
+        if(btnShowPw.isSelected())
+            txtPassword.setEchoChar((char)0);
+        else
+            txtPassword.setEchoChar('*');
+    }//GEN-LAST:event_btnShowPwActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnRegister;
+    private javax.swing.JCheckBox btnShowPw;
     private javax.swing.JLabel lblAsk;
     private javax.swing.JLabel lblBackground;
     private javax.swing.JPasswordField txtPassword;

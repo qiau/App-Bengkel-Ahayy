@@ -19,10 +19,11 @@ public class ProfileView extends MainView {
 
     
     private void displayUserData() {
-        txtName.setText("Name: " + user.getName());
-        txtAddress.setText("Address: " + user.getAddress());
-        txtPhoneNumber.setText("Phone Number: " + user.getPhoneNumber());
-        txtUsername.setText("Username: " + user.getUsername());
+        txtName.setText(user.getName());
+        txtAddress.setText(user.getAddress());
+        txtPhone.setText(user.getPhoneNumber());
+        txtUsername.setText(user.getUsername());
+        txtPassword.setText(user.getPassword());
         displayProfileImage();
     }
     
@@ -61,41 +62,29 @@ public class ProfileView extends MainView {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        btnBack = new javax.swing.JButton();
-        txtName = new javax.swing.JLabel();
-        txtAddress = new javax.swing.JLabel();
-        txtPhoneNumber = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         profileImageLabel = new javax.swing.JLabel();
+        lblPassword = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        lblGambar = new javax.swing.JLabel();
+        lblName = new javax.swing.JLabel();
+        lblAddress = new javax.swing.JLabel();
+        lblPhone = new javax.swing.JLabel();
+        lblUsername = new javax.swing.JLabel();
+        btnEdit = new javax.swing.JButton();
+        txtName = new javax.swing.JTextField();
+        txtAddress = new javax.swing.JTextField();
+        txtPhone = new javax.swing.JTextField();
+        txtUsername = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
+        lblBackground = new javax.swing.JLabel();
 
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        setMaximumSize(new java.awt.Dimension(750, 500));
+        setMinimumSize(new java.awt.Dimension(750, 500));
+        setPreferredSize(new java.awt.Dimension(750, 500));
+        setLayout(null);
 
-        btnBack.setText("Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-
-        txtName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtName.setText("Name");
-
-        txtAddress.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtAddress.setText("Address");
-
-        txtPhoneNumber.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtPhoneNumber.setText("Phone Number");
-
-        txtUsername.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtUsername.setText("Username");
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("PROFILE");
-
-        profileImageLabel.setForeground(new java.awt.Color(0, 102, 255));
+        profileImageLabel.setBackground(new java.awt.Color(255, 255, 255));
+        profileImageLabel.setForeground(new java.awt.Color(255, 255, 255));
         profileImageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         profileImageLabel.setText("Add Image");
         profileImageLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -104,61 +93,93 @@ public class ProfileView extends MainView {
                 profileImageLabelMouseClicked(evt);
             }
         });
+        add(profileImageLabel);
+        profileImageLabel.setBounds(210, 430, 88, 16);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(profileImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtPhoneNumber, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtAddress, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtUsername, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(151, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(btnBack))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(profileImageLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(txtName)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtAddress)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtPhoneNumber)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtUsername)
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
+        lblPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(255, 255, 255));
+        lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPassword.setText("Password :");
+        add(lblPassword);
+        lblPassword.setBounds(350, 320, 130, 30);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+        add(btnBack);
+        btnBack.setBounds(670, 20, 72, 23);
+
+        lblGambar.setMaximumSize(new java.awt.Dimension(200, 270));
+        lblGambar.setMinimumSize(new java.awt.Dimension(200, 270));
+        lblGambar.setPreferredSize(new java.awt.Dimension(200, 270));
+        add(lblGambar);
+        lblGambar.setBounds(97, 116, 200, 270);
+
+        lblName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(255, 255, 255));
+        lblName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblName.setText("Name :");
+        add(lblName);
+        lblName.setBounds(380, 120, 110, 30);
+
+        lblAddress.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblAddress.setForeground(new java.awt.Color(255, 255, 255));
+        lblAddress.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAddress.setText("Address :");
+        add(lblAddress);
+        lblAddress.setBounds(360, 170, 130, 30);
+
+        lblPhone.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblPhone.setForeground(new java.awt.Color(255, 255, 255));
+        lblPhone.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPhone.setText("Phone :");
+        add(lblPhone);
+        lblPhone.setBounds(360, 220, 140, 30);
+
+        lblUsername.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblUsername.setText("Username :");
+        add(lblUsername);
+        lblUsername.setBounds(350, 270, 130, 30);
+
+        btnEdit.setBackground(new java.awt.Color(122, 122, 122));
+        btnEdit.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        btnEdit.setForeground(new java.awt.Color(255, 255, 255));
+        btnEdit.setText("Edit");
+        btnEdit.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 122, 122), 4, true));
+        add(btnEdit);
+        btnEdit.setBounds(470, 370, 90, 26);
+
+        txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        add(txtName);
+        txtName.setBounds(470, 120, 240, 30);
+
+        txtAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        add(txtAddress);
+        txtAddress.setBounds(470, 170, 240, 30);
+
+        txtPhone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        add(txtPhone);
+        txtPhone.setBounds(470, 220, 240, 30);
+
+        txtUsername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        add(txtUsername);
+        txtUsername.setBounds(470, 270, 240, 30);
+
+        txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        add(txtPassword);
+        txtPassword.setBounds(470, 320, 240, 30);
+
+        lblBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bgProfile.png"))); // NOI18N
+        lblBackground.setMaximumSize(new java.awt.Dimension(750, 500));
+        lblBackground.setMinimumSize(new java.awt.Dimension(750, 500));
+        lblBackground.setPreferredSize(new java.awt.Dimension(750, 500));
+        add(lblBackground);
+        lblBackground.setBounds(0, 0, 750, 500);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -173,13 +194,20 @@ public class ProfileView extends MainView {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton btnEdit;
+    private javax.swing.JLabel lblAddress;
+    private javax.swing.JLabel lblBackground;
+    private javax.swing.JLabel lblGambar;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblPhone;
+    private javax.swing.JLabel lblUsername;
     private javax.swing.JLabel profileImageLabel;
-    private javax.swing.JLabel txtAddress;
-    private javax.swing.JLabel txtName;
-    private javax.swing.JLabel txtPhoneNumber;
-    private javax.swing.JLabel txtUsername;
+    private javax.swing.JTextField txtAddress;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtPhone;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 
 }
