@@ -21,6 +21,8 @@ public class BookingList extends MainView {
         tabelAdmin = new javax.swing.JTable();
         lblBackground = new javax.swing.JLabel();
 
+        setMaximumSize(new java.awt.Dimension(750, 500));
+        setMinimumSize(new java.awt.Dimension(750, 500));
         setLayout(null);
 
         lblTitle.setText("Booking List (Admin)");
@@ -54,7 +56,7 @@ public class BookingList extends MainView {
         jScrollPane1.setViewportView(tabelAdmin);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(60, 180, 580, 210);
+        jScrollPane1.setBounds(90, 210, 580, 210);
         add(lblBackground);
         lblBackground.setBounds(0, 0, 700, 440);
     }// </editor-fold>//GEN-END:initComponents

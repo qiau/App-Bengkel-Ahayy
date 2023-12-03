@@ -175,9 +175,6 @@ public class ProfileView extends MainView {
         txtPassword.setBounds(470, 320, 240, 30);
 
         lblBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bgProfile.png"))); // NOI18N
-        lblBackground.setMaximumSize(new java.awt.Dimension(750, 500));
-        lblBackground.setMinimumSize(new java.awt.Dimension(750, 500));
-        lblBackground.setPreferredSize(new java.awt.Dimension(750, 500));
         add(lblBackground);
         lblBackground.setBounds(0, 0, 750, 500);
     }// </editor-fold>//GEN-END:initComponents

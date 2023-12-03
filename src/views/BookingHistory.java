@@ -21,6 +21,8 @@ public class BookingHistory extends MainView {
         lblTitle = new javax.swing.JLabel();
         lblBackground = new javax.swing.JLabel();
 
+        setMaximumSize(new java.awt.Dimension(750, 500));
+        setMinimumSize(new java.awt.Dimension(750, 500));
         setLayout(null);
 
         tabelAdmin.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 255, 153), new java.awt.Color(204, 255, 204), null, new java.awt.Color(255, 204, 204))));
