@@ -42,9 +42,13 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(765, 532));
+        setMinimumSize(new java.awt.Dimension(765, 532));
+        setPreferredSize(new java.awt.Dimension(765, 532));
 
-        jPanel1.setMaximumSize(new java.awt.Dimension(1000, 660));
-        jPanel1.setMinimumSize(new java.awt.Dimension(1000, 660));
+        jPanel1.setMaximumSize(new java.awt.Dimension(750, 500));
+        jPanel1.setMinimumSize(new java.awt.Dimension(750, 500));
+        jPanel1.setPreferredSize(null);
         jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.LINE_AXIS));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -59,6 +63,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
