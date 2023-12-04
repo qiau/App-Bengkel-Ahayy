@@ -5,7 +5,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.SwingConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 
 public class ProfileView extends MainView {
     private User user;
@@ -28,12 +32,18 @@ public class ProfileView extends MainView {
     }
     
     private void displayProfileImage() {
-        // Load foto profil dari User atau gunakan foto profil default jika null
-        ImageIcon profileImageIcon = user.getProfileImage() != null ?
-                new ImageIcon(user.getProfileImage()) :
-                new ImageIcon(getClass().getResource("/path/to/defaultProfileImage.png"));
+        ImageIcon profileImageIcon;
+
+        if (user.getProfileImage() != null) {
+            // Jika ada gambar profil, gunakan yang telah diubah ukurannya
+            profileImageIcon = new ImageIcon(user.getProfileImage());
+        } else {
+            // Jika tidak ada gambar profil, gunakan gambar default
+            profileImageIcon = new ImageIcon(getClass().getResource("/assets/imgDefaultAdmin.png"));
+        }
 
         profileImageLabel.setIcon(profileImageIcon);
+        profileImageLabel.repaint();
     }
     
     private void chooseProfileImage() {
@@ -50,11 +60,37 @@ public class ProfileView extends MainView {
     }
     
     private void updateProfileImage(String imagePath) {
-        // Update foto profil pada objek User
-        user.setProfileImage(imagePath);
+        // Resize gambar sebelum disimpan
+        String resizedImagePath = resizeImage(imagePath, 100, 100);
 
-        // Tampilkan foto profil yang baru di UI
+        // Simpan path gambar yang baru diubah ukurannya ke objek User
+        user.setProfileImage(resizedImagePath);
+
+        // Tampilkan gambar yang baru diubah ukurannya di GUI
         displayProfileImage();
+    }
+    
+    private String resizeImage(String inputImagePath, int scaledWidth, int scaledHeight) {
+        try {
+            File inputFile = new File(inputImagePath);
+            BufferedImage inputImage = ImageIO.read(inputFile);
+
+            Image scaledImage = inputImage.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
+            BufferedImage outputImage = new BufferedImage(scaledWidth, scaledHeight, BufferedImage.TYPE_INT_RGB);
+            outputImage.getGraphics().drawImage(scaledImage, 0, 0, null);
+
+            // Ambil path direktori dari file input
+            String outputDirectory = inputFile.getParent();
+
+            // Ubah nama file output untuk menyimpan gambar yang diubah ukurannya di direktori yang sama
+            String outputImagePath = outputDirectory + File.separator + "resized_" + inputFile.getName();
+            ImageIO.write(outputImage, "jpg", new File(outputImagePath));
+
+            return outputImagePath;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 
